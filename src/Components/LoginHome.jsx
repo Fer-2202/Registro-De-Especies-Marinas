@@ -1,6 +1,59 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import Usuarios from '../Services/Usuarios'
+import {Link, useNavigate} from 'react-router-dom'
+import Swal from 'sweetalert2'
 
 function LoginHome() {
+
+const [nombre,SetNombre] = useState()
+const [contrasena,SetContrasena] = useState()
+const [usuarios,SetUsuarios] = useState()
+
+const navigate = useNavigate()
+
+useEffect(() => {
+
+  async function fetchDataUsers() {
+
+    const datos = await Usuarios.getUsuario()
+
+    SetUsuarios(datos)
+    
+  };
+
+  fetchDataUsers()
+  
+});
+
+function nombreUsuario(evento) {
+  
+  SetNombre(evento.target.value)
+
+}
+
+function contrasenaUsario(evento) {
+
+  SetContrasena(evento.target.value)
+  
+}
+
+function validacion() {
+  
+const encontrado = usuarios.filter(usuarios => usuarios.nombre === nombre && usuarios.contrasena === contrasena)
+ 
+if (encontrado.length === 0) {
+  Swal.fire({
+    icon: "error",
+    title: "Error",
+    text: "Usuario incorrecto",
+  });
+} else {
+  
+  navigate("/Home")
+
+}
+}
+
   return (
     <div>
 
@@ -8,11 +61,11 @@ function LoginHome() {
 
             <h1>Usuario</h1>
             <label>Usuario</label>
-            <input type="text" />
+            <input value={nombre} onChange={nombreUsuario} type="text" />
             <br /><br />
             <label>Contraseña</label>
-            <input type="text" />
-            <button>Iniciar</button>
+            <input value={contrasena} onChange={contrasenaUsario} type="text" />
+            <button onClick={validacion}>Iniciar</button>
         </div>
 
     </div>

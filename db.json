@@ -1,0 +1,15 @@
+{
+  "EspeciesRegis": [],
+  "UsuariosRegis": [
+    {
+      "id": "d509",
+      "nombre": "2222",
+      "contrasena": "qww"
+    },
+    {
+      "id": "2ae0",
+      "nombre": "Barry",
+      "contrasena": "1234"
+    }
+  ]
+}
