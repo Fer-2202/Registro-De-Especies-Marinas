@@ -1,0 +1,26 @@
+
+  
+.conte{
+  display: grid;
+  grid-template-columns: 1fr 5fr 0.7fr 0.9fr 0.9fr 1fr;
+  background-color: wheat;
+
+
+  align-items: center;
+  position: relative;
+
+}
+
+.foto{
+height: 100px;
+
+}
+div{
+
+ text-decoration: none; 
+ 
+}
+
+a{
+  text-decoration: none;
+}

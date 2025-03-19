@@ -1,16 +1,6 @@
-.vidContain {
-    height: 600px;
-    position:relative;
-    display:inline-block;
-    margin:10px;
-}
+
 .vid {
-   height: 600px;
-   width: 1200px;
-}    
-.content {
-    position:absolute;
-    top:0; left:0;
-    background: black;
-    color:white;
+   height: 700px;
+   width: 1246px;
+    
 }

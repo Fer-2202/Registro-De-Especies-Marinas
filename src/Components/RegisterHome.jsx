@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import Usuarios from '../Services/Usuarios';
 import Swal from 'sweetalert2'
+import { Link } from 'react-router-dom';
 
 function RegisterHome() {
-  
 
 const [nombreUsuario,SetNombre] = useState("")
 const [passwordUsuario,SetContrasena] = useState("")
@@ -13,6 +13,8 @@ function nombre(evento) {
   SetNombre(evento.target.value)
   
 }
+
+
 
 function password(evento) {
   
@@ -42,7 +44,6 @@ function password(evento) {
 
     }
 
-
   return (
     <div>
         <div>
@@ -56,10 +57,9 @@ function password(evento) {
             <input value={passwordUsuario} onChange={password} type="text" />
             <br /><br />
             <button onClick={crear}>Crear Usuario</button>
+
+            <p>¿Ya tienes una cuenta? <Link to= "/Login">!Inicia Sesion!</Link></p>
           </div>
-
-
-
 
         </div>
 

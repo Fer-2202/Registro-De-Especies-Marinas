@@ -4,8 +4,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Login from '../Pages/Login';
 import Register from '../Pages/Register';
-import Home from '../Pages/Home';
-import Video from '../Components/video';
+import Contacto from '../Pages/Contacto'
+import Home from '../Pages/Home'
+import Nosotros from '../Pages/Nosotros'
 
 function Routing() {
 
@@ -14,11 +15,11 @@ function Routing() {
     <div>
       <Router>
         <Routes>
-      
-                            <Route path="/Login" element={<Login/>}/>
-                            <Route path="/Register" element={<Register/>}/>
-                            <Route path='/' element={<Home/>}/>
-                            <Route path="/video" element={<Video/>}/>
+                  <Route path="/Nosotros" element={<Nosotros/>}/>
+                  <Route path="/Login" element={<Login/>}/>
+                  <Route path="/Register" element={<Register/>}/>
+                  <Route path="/" element={<Home/>}/>
+                  <Route path="/Contacto" element={<Contacto/>}/>
         </Routes>
       </Router>
     </div>

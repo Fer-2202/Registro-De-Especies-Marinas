@@ -49,7 +49,7 @@ if (encontrado.length === 0) {
   });
 } else {
   
-  navigate("/Home")
+  navigate("/")
 
 }
 }
@@ -66,6 +66,8 @@ if (encontrado.length === 0) {
             <label>Contraseña</label>
             <input value={contrasena} onChange={contrasenaUsario} type="text" />
             <button onClick={validacion}>Iniciar</button>
+
+            <p>¿No tienes una cuenta? <Link to= "/Register">¡Registrate aquí!</Link></p>
         </div>
 
     </div>
