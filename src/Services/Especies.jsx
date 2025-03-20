@@ -32,8 +32,6 @@ async function postEspecies(nombre,contrasena,email) {
         
         };
 
-
-
         const response = await fetch("http://localhost:3000/EspeciesRegis", {
             method: 'POST',
             headers: {
@@ -42,19 +40,15 @@ async function postEspecies(nombre,contrasena,email) {
             body: JSON.stringify(userData)
         });
 
-     
         return await response.json();
 
-        
     } catch (error) {
         console.error('Error posting user:', error);
         throw error;
     }
 }
 
-
 //////////////LLAMADO UPDATE/////////////
-
 
 async function updateEspecies(nombre,contrasena,email,id) 
 {
@@ -67,7 +61,6 @@ async function updateEspecies(nombre,contrasena,email,id)
         
         };
 
-
         const response = await fetch("http://localhost:3000/EspeciesRegis"+id, {
             method: 'PUT',
             headers: {
@@ -76,7 +69,6 @@ async function updateEspecies(nombre,contrasena,email,id)
             body: JSON.stringify(userData)
         });
 
-     
         return await response.json();
     } catch (error) {
         console.error('Error update user:', error);
@@ -84,10 +76,7 @@ async function updateEspecies(nombre,contrasena,email,id)
     }
 }
 
-
-
 //////////////LLAMADO DELETE/////////////
-
 
 async function deleteEspecie(id) {
     try {
@@ -108,6 +97,5 @@ async function deleteEspecie(id) {
         throw error;
     }
 }
-
 
 export default {deleteEspecie,updateEspecies,getEspecies,postEspecies}

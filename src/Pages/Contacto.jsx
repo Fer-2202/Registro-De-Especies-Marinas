@@ -6,9 +6,9 @@ function Contacto() {
   return (
     <div>
 
-        <ContactosHome />
+        
         <Nav/>
-
+        <ContactosHome />
     </div>
   )
 }

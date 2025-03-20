@@ -7,6 +7,7 @@ import Register from '../Pages/Register';
 import Contacto from '../Pages/Contacto'
 import Home from '../Pages/Home'
 import Nosotros from '../Pages/Nosotros'
+import Especies from '../Pages/Especies'
 
 function Routing() {
 
@@ -20,6 +21,8 @@ function Routing() {
                   <Route path="/Register" element={<Register/>}/>
                   <Route path="/" element={<Home/>}/>
                   <Route path="/Contacto" element={<Contacto/>}/>
+                  <Route path="/Especies" element={<Especies/>}/>      
+
         </Routes>
       </Router>
     </div>
