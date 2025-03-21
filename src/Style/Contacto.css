@@ -1,0 +1,35 @@
+.imagenMedusa{
+    width: 600px;
+    height: 400px;
+    margin-top: 70px;
+    border-radius: 10px;
+}
+
+.principal{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    /*background: blue;*/
+    padding: 40px;
+    border-radius: 10px;
+
+}
+
+.phone{
+    height: 15px;
+}
+
+.parras{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+    color: rgb(0, 0, 0);
+}
+
+.conta{
+    background: rgb(11, 95, 150);
+    padding: 40px;
+    border-radius: 10px;
+    
+}
+

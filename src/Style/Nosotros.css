@@ -1,0 +1,27 @@
+.fototortu{
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.ContenedorTortu{
+    display: grid;
+    grid-template-columns: 23fr 23fr;
+    align-items: center;
+    justify-items: center;
+    
+}
+
+.titulo{
+    text-align: center;
+}
+
+h1{
+    display: inline;
+}
+
+.contenedorText{
+    background: rgb(11, 95, 150);
+    padding: 40px;
+    border-radius: 10px;
+}

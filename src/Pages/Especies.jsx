@@ -1,14 +1,10 @@
 import React from 'react'
-import Nav from '../Components/Nav.jsx'
-import EspeciesHome from '../Components/EspeciesHome.jsx'
-import Carrusel from '../Components/Carrusel.jsx'
+import Nav from '../Components/Nav'
 
 function Especies() {
   return (
     <div>
-         <Nav/>
-         <EspeciesHome />
-         <Carrusel />
+        <Nav />
     </div>
   )
 }
