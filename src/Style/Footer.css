@@ -1,0 +1,15 @@
+.cont{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+}
+
+.face{
+    height: 30px;
+    width: 30px;
+}
+
+.redes{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+}

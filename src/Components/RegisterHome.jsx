@@ -50,6 +50,7 @@ function password(evento) {
             
           <div>
             <h1>Registrarse</h1>
+            <br />
             <label>Usuario</label>
             <input value={nombreUsuario} onChange={nombre} type="text" />
             <br /><br />
@@ -58,7 +59,7 @@ function password(evento) {
             <br /><br />
             <button onClick={crear}>Crear Usuario</button>
 
-            <p>¿Ya tienes una cuenta? <Link to= "/Login">!Inicia Sesion!</Link></p>
+            <p>¿Ya tienes una cuenta? <Link to= "/Login">Inicia Sesion</Link></p>
           </div>
 
         </div>

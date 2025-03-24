@@ -1,5 +1,6 @@
 import React from 'react'
 import RegisterHome from '../Components/RegisterHome'
+import Nav from '../Components/Nav.jsx'
 
 function Register() {
   return (

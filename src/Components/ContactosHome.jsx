@@ -14,8 +14,8 @@ function ContactosHome() {
               <h1>Nuestros Contactos</h1>
               <p className='parras'>Correo</p>
               <p className='parras'>moyafer779@gmail.com</p>
-              <p className='parras'><img className='phone' src= { phone } alt="" />  Numero</p>
-              <p className='parras'>8947 8346</p>
+              <p className='parras'>Numero</p>
+              <p className='parras'><img className='phone' src= { phone } alt="" /> 8947 8346</p>
               <p className='parras'>Dirección</p>
               <p className='parras'>600 metros este del muelle de cruceros, Puntarenas, Costa Rica, 60101.</p>
 

@@ -59,7 +59,6 @@ if (encontrado.length === 0) {
 
         <div>
 
-            <h1>Usuario</h1>
             <label>Usuario</label>
             <input value={nombre} onChange={nombreUsuario} type="text" />
             <br /><br />

@@ -19,7 +19,7 @@ function Nav() {
                           <h3><Link to= "/">Inicio</Link></h3>
                         </div>
                           <div>
-                          <h3><Link to= "/Nosotros">Nosotros</Link></h3>
+                            <h3><Link to= "/Nosotros">Nosotros</Link></h3>
                           </div>
                             <div>
                               <h3><Link to= "/Especies">Especies</Link></h3>
