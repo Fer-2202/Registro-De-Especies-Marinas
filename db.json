@@ -7,6 +7,24 @@
       "nombre": "Fer",
       "contrasena": "1234",
       "rol": "admin"
+    },
+    {
+      "id": "16d8",
+      "nombre": "Adri",
+      "contrasena": "1234",
+      "rol": "visitante"
+    },
+    {
+      "id": "c0ea",
+      "nombre": "Joss",
+      "contrasena": "1234",
+      "rol": "visitante"
+    },
+    {
+      "id": "5da2",
+      "nombre": "Joss",
+      "contrasena": "1234",
+      "rol": "visitante"
     }
   ]
 }

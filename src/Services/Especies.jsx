@@ -22,13 +22,12 @@ async function getEspecies() {
 
 //////////LLAMADO POST//////////
 
-async function postEspecies(nombre,contrasena,email) {
+async function postEspecies(info,imagen) {
     try {
      
         const userData = { 
-            nombre,
-            contrasena,
-            email
+            info,
+            imagen       
         
         };
 
@@ -50,19 +49,17 @@ async function postEspecies(nombre,contrasena,email) {
 
 //////////////LLAMADO UPDATE/////////////
 
-async function updateEspecies(nombre,contrasena,email,id) 
+async function updateEspecies(info,id) 
 {
     try {
      
         const userData = { 
-            nombre, 
-            contrasena,
-            email
-        
+           info
+           
         };
 
-        const response = await fetch("http://localhost:3000/EspeciesRegis"+id, {
-            method: 'PUT',
+        const response = await fetch("http://localhost:3000/EspeciesRegis/"+id, {
+            method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -78,7 +75,9 @@ async function updateEspecies(nombre,contrasena,email,id)
 
 //////////////LLAMADO DELETE/////////////
 
-async function deleteEspecie(id) {
+async function deleteEspecies(id) {
+
+    
     try {
         const response = await fetch(`http://localhost:3000/EspeciesRegis/${id}`, {
             method: 'DELETE',
@@ -98,4 +97,4 @@ async function deleteEspecie(id) {
     }
 }
 
-export default {deleteEspecie,updateEspecies,getEspecies,postEspecies}
+export default {deleteEspecies,updateEspecies,getEspecies,postEspecies}

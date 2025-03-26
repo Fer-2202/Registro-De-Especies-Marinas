@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import Usuarios from '../Services/Usuarios';
 import Swal from 'sweetalert2'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function RegisterHome() {
 
 const [nombreUsuario,SetNombre] = useState("")
 const [passwordUsuario,SetContrasena] = useState("")
+
+const navigate = useNavigate() 
 
 function nombre(evento) {
 
@@ -36,10 +38,11 @@ function password(evento) {
 
     Usuarios.postUsuario(nombreUsuario , passwordUsuario)
     Swal.fire({
-        title:"Usuario Registrado",
+        title:"Usuario creado",
         icon: "success",
         draggable: true
       });
+      navigate("/Login")
     }
 
     }

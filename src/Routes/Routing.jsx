@@ -8,6 +8,7 @@ import Contacto from '../Pages/Contacto'
 import Home from '../Pages/Home'
 import Nosotros from '../Pages/Nosotros'
 import Especies from '../Pages/Especies';
+import Admin from '../Pages/Admin';
 
 function Routing() {
 
@@ -21,7 +22,8 @@ function Routing() {
                   <Route path="/Register" element={<Register/>}/>
                   <Route path="/" element={<Home/>}/>
                   <Route path="/Contacto" element={<Contacto/>}/>
-                  <Route path="/Especies" element={<Especies/>}/>      
+                  <Route path="/Especies" element={<Especies/>}/>
+                  <Route path="/Admin" element={<Admin/>}/>     
 
         </Routes>
       </Router>

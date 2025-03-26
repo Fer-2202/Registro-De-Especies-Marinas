@@ -1,6 +1,7 @@
 import React from 'react'
 import '../Style/PaginaHome.css'
 import payasopez from '../Img/payasopez.jpg'
+import {Link} from 'react-router-dom'
 
 function PaginaHome() {
   return (
@@ -11,7 +12,7 @@ function PaginaHome() {
         <br /><br />
         <h2>Explora nuestra biodiversidad</h2>
         <br />
-        <button>Iniciar Sesión</button>
+        <button><Link to= "/Register">Inicia Sesion</Link></button>
       </div>
       <div>
         <img className='pezpayaso' src= { payasopez } alt="" />

@@ -34,7 +34,7 @@ function FooterHome() {
                           <p><Link to= "/">Inicio</Link></p>
                           <p><Link to= "/Nosotros">Nosotros</Link></p>
                           <p><Link to= "/Especies">Especies</Link></p>
-                          <p><Link to= "/Contactos">Contactos</Link></p>
+                          <p><Link to= "/Contacto">Contactos</Link></p>
 
                           </div>
                            

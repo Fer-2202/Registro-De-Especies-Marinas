@@ -47,11 +47,18 @@ if (encontrado.length === 0) {
     title: "Error",
     text: "Usuario incorrecto",
   });
+} if (encontrado[0].rol === "admin") {
+
+  navigate("/Admin")
+
 } else {
-  
+
+
   navigate("/")
 
+  
 }
+
 }
 
   return (
