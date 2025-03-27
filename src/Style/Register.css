@@ -1,0 +1,108 @@
+/* Estilo para el contenedor del registro */
+.contRegis {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;  /* Fondo claro */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 100%;
+    max-width: 400px; /* Formulario más estrecho */
+    margin: auto;  /* Centrado en la pantalla */
+    background-color: #ffffff;  /* Fondo blanco para el formulario */
+  }
+  
+  /* Título */
+  .contRegis h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Estilo para las etiquetas de los campos */
+  .contRegis label {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  /* Estilo para los campos de entrada */
+  .contRegis input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #444;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Efecto cuando el campo tiene foco */
+  .contRegis input[type="text"]:focus {
+    border-color: #3498db;  /* Color de borde azul cuando está en foco */
+    outline: none;
+  }
+  
+  /* Estilo para el botón */
+  .contRegis button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    color: white;
+    background-color: #3498db;  /* Fondo azul */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+  }
+  
+  /* Efecto hover en el botón */
+  .contRegis button:hover {
+    background-color: #2980b9;  /* Fondo azul más oscuro cuando se pasa el mouse */
+  }
+  
+  /* Estilo para el enlace */
+  .contRegis p {
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  /* Estilo para el enlace dentro de p */
+  .contRegis p a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  /* Efecto hover sobre el enlace */
+  .contRegis p a:hover {
+    text-decoration: underline;  /* Subrayado cuando el mouse pasa sobre el enlace */
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .contRegis {
+      padding: 30px;
+      width: 90%;  /* El formulario ocupa más espacio en pantallas pequeñas */
+    }
+  
+    .contRegis h1 {
+      font-size: 24px;  /* Reducir el tamaño del título en pantallas pequeñas */
+    }
+  
+    .contRegis input[type="text"], .contRegis button {
+      font-size: 16px;  /* Reducir el tamaño de los campos y botones */
+    }
+  }
+  

@@ -1,15 +1,99 @@
-.cont{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    
-}
-
-.face{
-    height: 30px;
-    width: 30px;
-}
-
-.redes{
-    display: grid;
-    grid-template-columns: 1fr 1fr ;
-}
+/* Contenedor principal */
+.cont {
+    background-color: #1c1c1c;  /* Color oscuro para un diseño moderno */
+    color: white;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    font-family: 'Poppins', sans-serif; /* Fuente moderna */
+    text-align: center;
+    border-top: 4px solid #00b894; /* Línea superior verde */
+  }
+  
+  /* Sección de contacto */
+  .cont > div {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .cont p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 1.8;
+    color: #d3d3d3; /* Gris claro */
+  }
+  
+  .cont a {
+    color: #00b894; /* Verde vibrante */
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .cont a:hover {
+    color: #00b894;
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+  }
+  
+  /* Estilo para las imágenes de redes sociales */
+  .redes {
+    display: flex;
+    justify-content: space-around;
+    gap: 25px;
+    align-items: center;
+    flex: 1;
+  }
+  
+  .redes div {
+    transition: transform 0.3s ease;
+  }
+  
+  .redes div:hover {
+    transform: translateY(-5px); /* Efecto hover para elevar el icono */
+  }
+  
+  .face {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #00b894; /* Borde verde vibrante */
+    padding: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .face:hover {
+    transform: scale(1.2); /* Aumentar el tamaño de las imágenes */
+    filter: brightness(1.2); /* Efecto de brillo al hacer hover */
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .cont {
+      flex-direction: column;
+      gap: 30px;
+    }
+  
+    .redes {
+      gap: 20px;
+    }
+  
+    .face {
+      width: 35px;
+      height: 35px;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .cont p {
+      font-size: 14px;
+    }
+  
+    .face {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  

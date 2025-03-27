@@ -9,7 +9,7 @@ function Nav() {
 
         <nav className='conte'>
             <div>
-                <img className='foto' src= { logopez } alt="" />
+                <img className='fotoLogo' src= { logopez } alt="" />
             </div>
                 <div>
                    <h2  className='titu'> Registro de Especies Marinas <br />

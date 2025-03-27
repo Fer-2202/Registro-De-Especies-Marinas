@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import Especies from '../Services/Especies'
 import Swal from 'sweetalert2'
+import '../Style/Admin.css'
 
 function admin() {
 
   const [pecesAgregados,setEspecies] = useState("")
   const [Peces, setAnimales] = useState([""])
-  const [pezAgregada,setEspeciesAnadidas] = useState()
+  const [pezAgregada,setEspeciesAnadidas] = useState("")
   
 
     useEffect(() => {
@@ -25,14 +26,28 @@ function admin() {
 
 
  async function agregar() {
-    
-   const pecesRegis = await Especies.postEspecies(pecesAgregados, imgs) 
-    setAnimales([...Peces,pecesRegis])
 
+  if (pecesAgregados === "" || imgs === "") {
+          Swal.fire({
+              title: 'Error',
+              text: 'Llene los espacios',
+              icon: 'error',
+              confirmButtonText: 'Ok'
+            })
+
+          }else{
+            
+            const pecesRegis = await Especies.postEspecies(pecesAgregados, imgs) 
+            setAnimales([...Peces,pecesRegis])
+            Swal.fire({
+                title:"Especie Registrada",
+                icon: "success",
+                draggable: true
+              });
+          }
   }
 
 
-  
  function agregado(evento) {
 
   setEspecies(evento.target.value)
@@ -40,33 +55,44 @@ function admin() {
  }
 
 
-  async function btnEliminar(id) {
+ async function btnEliminar(id) {
+  // Usamos Swal con async/await correctamente
+  const result = await Swal.fire({
+    title: "Are you sure?",
+    text: "You won't be able to revert this!",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Yes, delete it!"
+  });
 
-    Swal.fire({
-      title: "Are you sure?",
-      text: "You won't be able to revert this!",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delete it!"
-    }).then((result) => {
-      if (result.isConfirmed) {
-        Especies.deleteEspecies(id)
-        Swal.fire({
-          title: "Deleted!",
-          text: "Your file has been deleted.",
-          icon: "success"
-        });
-        
-      }
-    });
-   
-    
-    
-    
-    
+  if (result.isConfirmed) {
+    try {
+      // Aquí haces la eliminación con await
+      const pezEliminado = await Especies.deleteEspecies(id);
+
+      // Actualizas el estado con la nueva lista
+      const datos = await Especies.getEspecies();
+      setAnimales(datos);
+
+      // Notificas al usuario que la eliminación fue exitosa
+      Swal.fire({
+        title: "Deleted!",
+        text: "Your file has been deleted.",
+        icon: "success"
+      });
+    } catch (error) {
+      console.error('Error eliminando el pez:', error);
+      Swal.fire({
+        title: "Error!",
+        text: "There was an issue deleting the file.",
+        icon: "error"
+      });
+    }
   }
+}
+
 
 
   function anadida(evento) {
@@ -75,8 +101,12 @@ function admin() {
     
   }
 
-  function btnEdit(nombre, id){
-      Especies.updateEspecies(nombre, id)
+  async function btnEdit(nombre, id){
+
+      const prueba = Especies.updateEspecies(nombre, id)
+      const datos = await Especies.getEspecies();
+      setAnimales(datos);
+
   }
 
 
@@ -95,18 +125,21 @@ function admin() {
 
   return (
     <div>
-
+      <div>
+      <img className='foto' src={ imgs } alt="" /> <br />
       <input onChange={handleChange} type="file" /> <br />
       <input value={pecesAgregados} onChange={agregado} type="text" />
       <button onClick={agregar} className='boton'>Guardar</button>
-
+      </div>
       {Peces.map((Pez,index) => ( 
-      <div key={index}><br /> <br />
+      <div className='pecesguardados' key={index}><br /> <br />
+      <div>
       <h2>{Pez.info}</h2>
       <img className='foto' src={ Pez.imagen } alt="" /> <br />
       <button onClick={e=>btnEliminar(Pez.id)}>Eliminar</button>
       <button onClick={e=>btnEdit(pezAgregada, Pez.id)}>Editar</button>
-      <input value={pezAgregada} onChange={anadida} type="text" />
+      <input onChange={anadida} type="text" />
+      </div>
       </div>
         ))} 
     </div>

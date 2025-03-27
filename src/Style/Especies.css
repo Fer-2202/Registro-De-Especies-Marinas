@@ -1,0 +1,64 @@
+/* Estilo para el contenedor principal */
+.tituloEs {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .tituloEs h1 {
+    font-size: 28px;
+    color: #2c3e50;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Contenedor que contiene las fotos */
+  .contenedorPez {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las imágenes se envuelvan en múltiples filas */
+    justify-content: space-between; /* Espaciado entre las fotos */
+    gap: 20px; /* Espaciado entre las fotos */
+    padding: 0 20px;
+  }
+  
+  /* Estilo para cada contenedor de imagen */
+  .contenedorFotos {
+    text-align: center;
+    width: calc(25% - 20px); /* Calcula el ancho para 4 fotos en una fila, teniendo en cuenta el espaciado */
+    box-sizing: border-box;
+  }
+  
+  .contenedorFotos h2 {
+    font-size: 18px;
+    color: #34495e;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo para las imágenes */
+  .foto {
+    width: 200px; /* Tamaño fijo de las imágenes */
+    height: 200px; /* Mantener la imagen cuadrada */
+    object-fit: cover; /* Asegura que la imagen se recorte de forma adecuada */
+    border-radius: 8px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Efecto de transición */
+  }
+  
+  /* Efecto al pasar el mouse sobre las imágenes */
+  .foto:hover {
+    transform: scale(1.05); /* Aumentar ligeramente el tamaño */
+  }
+  
+  /* Responsividad para dispositivos más pequeños */
+  @media (max-width: 768px) {
+    .contenedorFotos {
+      width: calc(50% - 20px); /* En pantallas pequeñas, 2 fotos por fila */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contenedorFotos {
+      width: 100%; /* En dispositivos muy pequeños, 1 foto por fila */
+    }
+  }
+  

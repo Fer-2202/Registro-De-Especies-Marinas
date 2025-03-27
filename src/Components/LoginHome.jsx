@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Usuarios from '../Services/Usuarios'
 import {Link, useNavigate} from 'react-router-dom'
 import Swal from 'sweetalert2'
+import '../Style/Login.css'
 
 function LoginHome() {
 
@@ -64,7 +65,7 @@ if (encontrado.length === 0) {
   return (
     <div>
 
-        <div>
+        <div className='contLogin'>
 
             <label>Usuario</label>
             <input value={nombre} onChange={nombreUsuario} type="text" />

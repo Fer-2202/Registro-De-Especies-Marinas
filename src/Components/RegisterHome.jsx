@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Usuarios from '../Services/Usuarios';
 import Swal from 'sweetalert2'
 import { Link, useNavigate } from 'react-router-dom';
+import '../Style/Register.css'
 
 function RegisterHome() {
 
@@ -50,8 +51,8 @@ function password(evento) {
   return (
     <div>
         <div>
-            
-          <div>
+            <br /><br />
+          <div className='contRegis'>
             <h1>Registrarse</h1>
             <br />
             <label>Usuario</label>
