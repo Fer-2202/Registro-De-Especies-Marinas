@@ -1,0 +1,120 @@
+/* Estilos generales */
+.contPrincipalLogin {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Contenedor principal de login */
+.contPrincipalLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 2rem;
+}
+
+/* Contenedor del formulario de login */
+.contLogin {
+  background-color: #fff;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Título de la página */
+.tituloIniciaSesion {
+  font-size: 2rem;
+  color: #009688;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Estilo de los labels */
+.tituloUsuario, .tituloContraRegis {
+  font-size: 1.1rem;
+  color: #333;
+  text-align: left;
+  display: block;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+/* Estilo de los inputs */
+.input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus {
+  border-color: #009688;
+  outline: none;
+}
+
+/* Botón de inicio de sesión */
+.btnLogin {
+  width: 100%;
+  padding: 1rem;
+  background-color: #009688;
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btnLogin:hover {
+  background-color: #00796b;
+}
+
+/* Enlace al registro */
+.irRegister {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+.irRegister a {
+  color: #009688;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.irRegister a:hover {
+  color: #00796b;
+}
+
+/* Animación de aparición */
+.contLogin {
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

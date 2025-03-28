@@ -9,7 +9,7 @@ function NosotrosHome() {
         <h1>Acerca del Registro Del Parque Marino</h1>
       </div>
           <ul className='ContenedorTortu'>
-              <div>
+              <div className='fotoTotuga'>
                 <img className='fototortu' src= { tortuga } alt="" />
               </div>
             <div className='contenedorText'>

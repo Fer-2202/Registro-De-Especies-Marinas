@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Especies from '../Services/Especies'
 import '../Style/Especies.css'
 
+
 function EspeciesHome() {
 
   const [Peces, setAnimales] = useState([""])
@@ -33,7 +34,7 @@ function EspeciesHome() {
 
       <div className='contenedorPez'>
       {Peces.map((Pez,index) => ( 
-      <div className='contenedorFotos' key={index}><br /> <br />
+      <div className='contenedorFotos' key={index}>
       <h2>{Pez.info}</h2>
       <img className='foto' src={ Pez.imagen } alt="" /> <br />
       </div>

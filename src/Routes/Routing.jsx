@@ -25,6 +25,10 @@ function Routing() {
                   <Route path="/Especies" element={<Especies/>}/>
                   <Route path="/Admin" element={<Admin/>}/>     
 
+
+
+
+
         </Routes>
       </Router>
     </div>

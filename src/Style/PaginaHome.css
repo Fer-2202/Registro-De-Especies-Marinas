@@ -1,11 +1,107 @@
-.fondo{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 100px;
-}
-
-.pezpayaso{
-    height: 400px;
-    width: 500px;
-    
-}
+/* Estilos generales para el body */
+.cuerpoPagina {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7; /* Fondo neutro y limpio */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  /* Estilo del contenedor principal */
+  .container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 900px;
+    width: 100%;
+    color: #333;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .container:hover {
+    transform: scale(1.02); /* Efecto de hover para darle dinamismo */
+  }
+  
+  /* Estilos del título principal */
+  .tituloUno {
+    font-size: 36px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .highlight {
+    color: #1abc9c; /* Color moderno y fresco */
+  }
+  
+  /* Estilos del subtítulo */
+  .tituloDos {
+    font-size: 24px;
+    font-weight: 300;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+    opacity: 0.8;
+  }
+  
+  /* Estilo del botón */
+  .botonRegisPri {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .botonRegisPri:hover {
+    background-color: #16a085;
+    transform: translateY(-2px);
+  }
+  
+  .link {
+    text-decoration: none;
+    color: white;
+  }
+  
+  /* Estilo de la imagen del pez payaso */
+  .imagenPezPayaso {
+    margin-top: 40px;
+  }
+  
+  .pezpayaso {
+    width: 200px;
+    border-radius: 50%;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .pezpayaso:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      padding: 30px;
+    }
+    .tituloUno {
+      font-size: 28px;
+    }
+    .tituloDos {
+      font-size: 20px;
+    }
+    .pezpayaso {
+      width: 150px;
+    }
+  }
+  
+  

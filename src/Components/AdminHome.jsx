@@ -58,13 +58,14 @@ function admin() {
  async function btnEliminar(id) {
   // Usamos Swal con async/await correctamente
   const result = await Swal.fire({
-    title: "Are you sure?",
-    text: "You won't be able to revert this!",
+    title: "Quieres eliminar esta especie?",
+    text: "No se podra revertir esta accion",
     icon: "warning",
     showCancelButton: true,
-    confirmButtonColor: "#3085d6",
-    cancelButtonColor: "#d33",
-    confirmButtonText: "Yes, delete it!"
+    cancelButtonText: "Conservar Especie",
+    confirmButtonColor: "#d33",
+    cancelButtonColor: "#3085d6",
+    confirmButtonText: "Eliminar especie"
   });
 
   if (result.isConfirmed) {
@@ -78,8 +79,8 @@ function admin() {
 
       // Notificas al usuario que la eliminación fue exitosa
       Swal.fire({
-        title: "Deleted!",
-        text: "Your file has been deleted.",
+        title: "Eliminado",
+        text: " La especie fue eliminada",
         icon: "success"
       });
     } catch (error) {
@@ -124,24 +125,31 @@ function admin() {
   
 
   return (
-    <div>
-      <div>
-      <img className='foto' src={ imgs } alt="" /> <br />
-      <input onChange={handleChange} type="file" /> <br />
-      <input value={pecesAgregados} onChange={agregado} type="text" />
-      <button onClick={agregar} className='boton'>Guardar</button>
+  <div className='contenedorAdmin'>
+      <div className='contenedorSubirFoto'>
+      <img className='fotoAdmin' src={ imgs } alt="" /> <br />
+      <input className='subirFoto' onChange={handleChange} type="file" /> <br />
+      <input className='SubirTexto' value={pecesAgregados} onChange={agregado} type="text" />
+      <button onClick={agregar} className='botonGuardarEspecie'>Guardar</button>
       </div>
+
+      <div className='contenedorPez'>
       {Peces.map((Pez,index) => ( 
+        
       <div className='pecesguardados' key={index}><br /> <br />
       <div>
       <h2>{Pez.info}</h2>
-      <img className='foto' src={ Pez.imagen } alt="" /> <br />
+      <img className='fotoAdmin2' src={ Pez.imagen } alt="" /> <br />
       <button onClick={e=>btnEliminar(Pez.id)}>Eliminar</button>
       <button onClick={e=>btnEdit(pezAgregada, Pez.id)}>Editar</button>
       <input onChange={anadida} type="text" />
       </div>
+
+        
+
       </div>
         ))} 
+        </div>
     </div>
   )
 }

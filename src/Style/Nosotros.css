@@ -1,27 +1,79 @@
-.fototortu{
-    width: 500px;
-    height: 300px;
-    border-radius: 10px;
-}
-
-.ContenedorTortu{
-    display: grid;
-    grid-template-columns: 23fr 23fr;
-    align-items: center;
-    justify-items: center;
-    
-}
-
-.titulo{
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* Contenedor principal */
+  .titulo {
     text-align: center;
-}
-
-h1{
-    display: inline;
-}
-
-.contenedorText{
-    background: rgb(11, 95, 150);
-    padding: 40px;
-    border-radius: 10px;
-}
+    padding: 2rem;
+    background-color: #009688;
+    color: #fff;
+    border-bottom: 2px solid #00796b;
+  }
+  
+  /* Estilos del encabezado */
+  .titulo h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  
+  /* Estilo para el contenedor de tortuga y texto */
+  .ContenedorTortu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 3rem 0;
+    padding: 0 2rem;
+  }
+  
+  /* Estilo para la imagen de la tortuga */
+  .fotoTotuga {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .fototortu {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Contenedor de texto */
+  .contenedorText {
+    flex: 1.5;
+    padding: 0 2rem;
+  }
+  
+  .contenedorText h2 {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: #555;
+    font-weight: 300;
+    text-align: justify;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .ContenedorTortu {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .fotoTotuga, .contenedorText {
+      margin-bottom: 2rem;
+    }
+    
+    .contenedorText h2 {
+      font-size: 1.2rem;
+    }
+  }
+  
+  

@@ -54,27 +54,24 @@ if (encontrado.length === 0) {
 
 } else {
 
-
   navigate("/")
-
   
 }
-
 }
 
   return (
-    <div>
+    <div className='contPrincipalLogin'>
 
         <div className='contLogin'>
-
-            <label>Usuario</label>
-            <input value={nombre} onChange={nombreUsuario} type="text" />
+            <h1 className='tituloIniciaSesion'>Inicia Sesion</h1>
+            <label className='tituloUsuario'>Usuario</label>
+            <input className='input' value={nombre} onChange={nombreUsuario} type="text" />
             <br /><br />
-            <label>Contraseña</label>
-            <input value={contrasena} onChange={contrasenaUsario} type="text" />
-            <button onClick={validacion}>Iniciar</button>
+            <label className='tituloContra'>Contraseña</label>
+            <input className='input' value={contrasena} onChange={contrasenaUsario} type="text" />
+            <button className='btnLogin' onClick={validacion}>Iniciar</button>
 
-            <p>¿No tienes una cuenta? <Link to= "/Register">¡Registrate aquí!</Link></p>
+            <p className='irRegister'>¿No tienes una cuenta? <Link to= "/Register">¡Registrate aquí!</Link></p>
         </div>
 
     </div>

@@ -1,108 +1,120 @@
-/* Estilo para el contenedor del registro */
+/* Estilos generales */
+.contenedorPrin {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Contenedor principal de registro */
+.contenedorPrin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 2rem;
+}
+
+/* Contenedor del formulario de registro */
 .contRegis {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #f5f5f5;  /* Fondo claro */
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    width: 100%;
-    max-width: 400px; /* Formulario más estrecho */
-    margin: auto;  /* Centrado en la pantalla */
-    background-color: #ffffff;  /* Fondo blanco para el formulario */
+  background-color: #fff;
+  padding: 2.5rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Título de la página */
+.tituloUsuario, .tituloContra {
+  font-size: 2rem;
+  color: #009688;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Estilo de los labels */
+.usuarioRegis {
+  font-size: 1.1rem;
+  color: #333;
+  text-align: left;
+  display: block;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+/* Estilo de los inputs */
+.input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus {
+  border-color: #009688;
+  outline: none;
+}
+
+/* Botón de crear cuenta */
+.botonIniciarSesion {
+  width: 100%;
+  padding: 1rem;
+  background-color: #009688;
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.botonIniciarSesion:hover {
+  background-color: #00796b;
+}
+
+/* Enlace al login */
+.linkIniciaSesion {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+.linkIniciaSesion a {
+  color: #009688;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.linkIniciaSesion a:hover {
+  color: #00796b;
+}
+
+/* Animación de aparición */
+.contRegis {
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
   }
-  
-  /* Título */
-  .contRegis h1 {
-    font-size: 28px;
-    color: #333;
-    margin-bottom: 20px;
-    font-weight: bold;
-    text-align: center;
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  /* Estilo para las etiquetas de los campos */
-  .contRegis label {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 5px;
-    display: block;
-    text-align: left;
-    font-weight: bold;
-  }
-  
-  /* Estilo para los campos de entrada */
-  .contRegis input[type="text"] {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    font-size: 16px;
-    color: #444;
-    background-color: #f9f9f9;
-    transition: border-color 0.3s ease;
-  }
-  
-  /* Efecto cuando el campo tiene foco */
-  .contRegis input[type="text"]:focus {
-    border-color: #3498db;  /* Color de borde azul cuando está en foco */
-    outline: none;
-  }
-  
-  /* Estilo para el botón */
-  .contRegis button {
-    width: 100%;
-    padding: 12px;
-    font-size: 18px;
-    color: white;
-    background-color: #3498db;  /* Fondo azul */
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-weight: bold;
-  }
-  
-  /* Efecto hover en el botón */
-  .contRegis button:hover {
-    background-color: #2980b9;  /* Fondo azul más oscuro cuando se pasa el mouse */
-  }
-  
-  /* Estilo para el enlace */
-  .contRegis p {
-    font-size: 14px;
-    color: #555;
-    text-align: center;
-    margin-top: 10px;
-  }
-  
-  /* Estilo para el enlace dentro de p */
-  .contRegis p a {
-    color: #3498db;
-    text-decoration: none;
-  }
-  
-  /* Efecto hover sobre el enlace */
-  .contRegis p a:hover {
-    text-decoration: underline;  /* Subrayado cuando el mouse pasa sobre el enlace */
-  }
-  
-  /* Responsividad */
-  @media (max-width: 768px) {
-    .contRegis {
-      padding: 30px;
-      width: 90%;  /* El formulario ocupa más espacio en pantallas pequeñas */
-    }
-  
-    .contRegis h1 {
-      font-size: 24px;  /* Reducir el tamaño del título en pantallas pequeñas */
-    }
-  
-    .contRegis input[type="text"], .contRegis button {
-      font-size: 16px;  /* Reducir el tamaño de los campos y botones */
-    }
-  }
-  
+}

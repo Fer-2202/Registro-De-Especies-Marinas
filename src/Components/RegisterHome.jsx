@@ -49,24 +49,18 @@ function password(evento) {
     }
 
   return (
-    <div>
-        <div>
-            <br /><br />
+    <div className='contenedorPrin'>
+    
           <div className='contRegis'>
-            <h1>Registrarse</h1>
-            <br />
-            <label>Usuario</label>
-            <input value={nombreUsuario} onChange={nombre} type="text" />
-            <br /><br />
-            <label>Contraseña</label>
-            <input value={passwordUsuario} onChange={password} type="text" />
-            <br /><br />
-            <button onClick={crear}>Crear Usuario</button>
+            <h1 className='tituloRegis'>Registrarse</h1>
+            <label className='usuarioRegis'>Usuario</label>
+            <input className='input' value={nombreUsuario} onChange={nombre} type="text" />
+            <label className='tituloContraRegis'>Contraseña</label>
+            <input className='input' value={passwordUsuario} onChange={password} type="text" />
+            <button className='botonIniciarSesion' onClick={crear}>Crear Usuario</button>
 
-            <p>¿Ya tienes una cuenta? <Link to= "/Login">Inicia Sesion</Link></p>
+            <p className='linkIniciaSesion'>¿Ya tienes una cuenta? <Link to= "/Login">Inicia Sesion</Link></p>
           </div>
-
-        </div>
 
     </div>
   )
