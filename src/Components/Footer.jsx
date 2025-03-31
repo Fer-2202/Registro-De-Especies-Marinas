@@ -56,9 +56,10 @@ function FooterHome() {
           </div>
           <div>
           <p>
-            <Link to= "https://www.youtube.com/@ParqueMarino"> <img className='face' src= { youtube } alt="" /></Link>
+            <Link to= "https://www.youtube.com/@ParqueMarino"> <img className='face' src= { youtube }  /></Link>
           </p>
           </div>
+
 
         </div>
       </footer>

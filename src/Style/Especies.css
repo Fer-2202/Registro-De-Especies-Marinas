@@ -38,7 +38,6 @@
   .foto {
     width: 200px; /* Tamaño fijo de las imágenes */
     height: 200px; /* Mantener la imagen cuadrada */
-    object-fit: cover; /* Asegura que la imagen se recorte de forma adecuada */
     border-radius: 8px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease; /* Efecto de transición */

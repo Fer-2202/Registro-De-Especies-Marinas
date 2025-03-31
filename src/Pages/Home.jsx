@@ -7,6 +7,7 @@ import Footer from '../Components/Footer.jsx'
 function Home() {
   return (
     <div>
+      
         <Nav/>
         <Video/>
         <PaginaHome />

@@ -6,6 +6,7 @@ import Footer from '../Components/Footer'
 function Admin() {
   return (
     <div>
+      
         <Nav/>
         <AdminHome />
         <Footer />

@@ -9,6 +9,12 @@ import Home from '../Pages/Home'
 import Nosotros from '../Pages/Nosotros'
 import Especies from '../Pages/Especies';
 import Admin from '../Pages/Admin';
+// import RutaPrivada from './RutaPrivada';
+import PrivadaRuta from './PrivadaRuta';
+
+
+
+
 
 function Routing() {
 
@@ -23,10 +29,11 @@ function Routing() {
                   <Route path="/" element={<Home/>}/>
                   <Route path="/Contacto" element={<Contacto/>}/>
                   <Route path="/Especies" element={<Especies/>}/>
-                  <Route path="/Admin" element={<Admin/>}/>     
+                  <Route path="/Admin" element={ <PrivadaRuta element={<Admin/>}/>}/>
+                       
 
-
-
+                  
+                  {/* <Route path="/Admin" element={<RutaPrivada element={ <Admin />}> </RutaPrivada>}/>  */}
 
 
         </Routes>

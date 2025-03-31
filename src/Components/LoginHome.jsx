@@ -50,8 +50,10 @@ if (encontrado.length === 0) {
   });
 } if (encontrado[0].rol === "admin") {
 
-  navigate("/Admin")
+  localStorage.setItem("token", "visitante-encontrado");
 
+  navigate("/Admin")
+  
 } else {
 
   navigate("/")
@@ -64,11 +66,12 @@ if (encontrado.length === 0) {
 
         <div className='contLogin'>
             <h1 className='tituloIniciaSesion'>Inicia Sesion</h1>
+            
             <label className='tituloUsuario'>Usuario</label>
             <input className='input' value={nombre} onChange={nombreUsuario} type="text" />
             <br /><br />
             <label className='tituloContra'>Contraseña</label>
-            <input className='input' value={contrasena} onChange={contrasenaUsario} type="text" />
+            <input className='input' value={contrasena} onChange={contrasenaUsario} type="password" />
             <button className='btnLogin' onClick={validacion}>Iniciar</button>
 
             <p className='irRegister'>¿No tienes una cuenta? <Link to= "/Register">¡Registrate aquí!</Link></p>

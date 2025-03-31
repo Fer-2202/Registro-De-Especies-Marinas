@@ -94,8 +94,6 @@ function admin() {
   }
 }
 
-
-
   function anadida(evento) {
 
     setEspeciesAnadidas(evento.target.value)
@@ -126,6 +124,7 @@ function admin() {
 
   return (
   <div className='contenedorAdmin'>
+    
       <div className='contenedorSubirFoto'>
       <img className='fotoAdmin' src={ imgs } alt="" /> <br />
       <input className='subirFoto' onChange={handleChange} type="file" /> <br />
@@ -137,16 +136,13 @@ function admin() {
       {Peces.map((Pez,index) => ( 
         
       <div className='pecesguardados' key={index}><br /> <br />
-      <div>
+     
       <h2>{Pez.info}</h2>
       <img className='fotoAdmin2' src={ Pez.imagen } alt="" /> <br />
       <button onClick={e=>btnEliminar(Pez.id)}>Eliminar</button>
       <button onClick={e=>btnEdit(pezAgregada, Pez.id)}>Editar</button>
       <input onChange={anadida} type="text" />
-      </div>
-
-        
-
+   
       </div>
         ))} 
         </div>

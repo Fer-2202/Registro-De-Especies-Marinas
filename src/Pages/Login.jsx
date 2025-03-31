@@ -6,9 +6,11 @@ import Footer from '../Components/Footer'
 function Login() {
   return (
     <div>
+
       <Nav/> 
       <LoginHome />
       <Footer />
+      
     </div>
   )
 }

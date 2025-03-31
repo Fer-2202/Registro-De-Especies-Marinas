@@ -5,10 +5,12 @@ import EspeciesHome from '../Components/EspeciesHome'
 
 function Especies() {
   return (
-    <div>
+    <div> 
+
         <Nav />
         <EspeciesHome />
         <Footer />
+        
     </div>
   )
 }

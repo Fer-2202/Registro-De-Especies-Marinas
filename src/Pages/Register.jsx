@@ -8,9 +8,11 @@ import Footer from '../Components/Footer'
 function Register() {
   return (
     <div>
+
         <Nav />
         <RegisterHome />
         <Footer />
+        
     </div>
   )
 }

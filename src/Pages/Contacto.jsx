@@ -7,7 +7,6 @@ function Contacto() {
   return (
     <div>
 
-        
         <Nav/>
         <ContactosHome />
         <Footer />

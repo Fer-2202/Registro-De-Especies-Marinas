@@ -55,8 +55,8 @@ function password(evento) {
             <h1 className='tituloRegis'>Registrarse</h1>
             <label className='usuarioRegis'>Usuario</label>
             <input className='input' value={nombreUsuario} onChange={nombre} type="text" />
-            <label className='tituloContraRegis'>Contraseña</label>
-            <input className='input' value={passwordUsuario} onChange={password} type="text" />
+            <label className='tituloContra'>Contraseña</label>
+            <input className='input' value={passwordUsuario} onChange={password} type="password" />
             <button className='botonIniciarSesion' onClick={crear}>Crear Usuario</button>
 
             <p className='linkIniciaSesion'>¿Ya tienes una cuenta? <Link to= "/Login">Inicia Sesion</Link></p>

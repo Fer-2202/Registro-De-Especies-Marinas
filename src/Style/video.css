@@ -1,6 +1,5 @@
-
 .vid {
-   height: 700px;
-   width: 1246px;
-    
-}
+   width: 100%;
+   height: auto;  /* Mantiene la proporción original del video */
+   object-fit: cover;  /* Rellenará el contenedor, recortando si es necesario */
+ }

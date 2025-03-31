@@ -7,9 +7,11 @@ import Footer from '../Components/Footer'
 function Nosotros() {
   return (
     <div>
+
         <Nav />
         <NosotrosHome />
         <Footer />
+        
     </div>
   )
 }
